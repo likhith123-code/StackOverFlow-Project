@@ -1,11 +1,13 @@
 # StackOverFlow-Project
 
 ## Data Source
+
 https://archive.org/download/stackexchange/stackoverflow.com-Badges.7z<br>
 https://archive.org/download/stackexchange/stackoverflow.com-Posts.7z<br>
 https://archive.org/download/stackexchange/stackoverflow.com-Users.7z<br>
 
 ## Schema and The Entity Relationship Diagram
+
 https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede
 
 ## Questions 
@@ -18,13 +20,23 @@ https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-
 
 4. Which day of the week has most questions answered within an hour?
 
-## Steps for Execution
+## Setting up Google Cloud Data Proc Cluster
+
+https://cloud.google.com/dataproc/docs/guides/setup-project
+
+## Steps for Execution in Data Proc
 
 1. Download the data into Local file system
 ```bash
   wget <link>
   7z e <file-name>
 ```
+Note: 
+Installation of 7zip (if not exists)
+```bash
+  sudo apt-get install p7zip-full
+```
+
 2. Move the data to HDFS
 ```bash
  hadoop fs -put <source-path> <hdfs-destination-path>
