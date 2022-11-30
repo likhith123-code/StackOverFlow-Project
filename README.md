@@ -38,7 +38,9 @@ spark-submit --packages com.databricks:spark-xml_2.12:0.15.0 --class <class-name
 
 ### Note
 
-The Outputs shown are the result of processing Partial Data as the complete data is too vast to process. Hence A couple of split files are used to process.
+The Outputs shown are the result of processing partial data as the complete data is too vast to process. Hence a couple of split files are used to process.
 
-The initial input files are split into parts using : <br>
-```split -a <file_name_to_appear> -d -l <No_of_records_per_split_file> <File_toSplit> <Split_file_name_>```
+The initial input files are split into parts using :
+<br>
+
+```split -a <Suffix_length> -d -l <No_of_records_per_split_file> <File_to_Split> <Prefix_for_new_files>```
