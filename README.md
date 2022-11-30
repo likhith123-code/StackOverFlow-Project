@@ -20,7 +20,7 @@ Which day of the week has most questions answered within an hour?
 
 ## Steps for Execution
 
-1. Download the data into HDFS file system
+1. Download the data into Local file system
 ```bash
   wget <link>
   7z e <file-name>
@@ -28,6 +28,12 @@ Which day of the week has most questions answered within an hour?
 2. Move the data to HDFS
 ```bash
  hadoop fs -put <source-path> <hdfs-destination-path>
+```
+3. Upload the Jar File
+
+4. Submitting the spark job
+```bash
+spark-submit --packages com.databricks:spark-xml_2.12:0.15.0 --class <class-name> <jar-file-location> <args>
 ```
 
 ### Note
