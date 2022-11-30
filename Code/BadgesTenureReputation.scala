@@ -48,7 +48,7 @@ object BadgesTenureReputation {
       .withColumn("Tenure",round(datediff(current_timestamp(),col("_CreationDate"))/365.25,0))
 
     users.printSchema()
-    users.show()
+    users.show();
 
     badges.createOrReplaceTempView("b")
     users.createOrReplaceTempView("u")
