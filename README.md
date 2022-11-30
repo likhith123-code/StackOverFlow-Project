@@ -36,7 +36,7 @@ https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-
 spark-submit --packages com.databricks:spark-xml_2.12:0.15.0 --class <class-name> <jar-file-location> <args>
 ```
 
-### Note
+## Note
 
 The Outputs shown are the result of processing partial data as the complete data is too vast to process. Hence a couple of split files are used to process.
 
