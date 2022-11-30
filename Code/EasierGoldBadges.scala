@@ -52,5 +52,6 @@ object EasierGoldBadges {
     firstBadge.show(10);
     val df_final=firstBadge.groupBy("_Name").agg(count("_Name").as("Number"),avg("tenure").as("AverageTenure")).orderBy(col("Number").desc).limit(10)
     df_final.show()
+    df_final.write.format("csv").mode("overwrite").save(array(2));
   }
 }
