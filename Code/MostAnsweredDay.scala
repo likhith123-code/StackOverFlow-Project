@@ -31,7 +31,7 @@ object MostAnsweredDay {
     val window = Window.partitionBy("_ParentId").orderBy("_CreationDate")
 
     val first_answer = answers.withColumn("row_number",row_number().over(window))
-    // first_answer.show(10);
+    // first_answer.show(5);
 
     questions.createOrReplaceTempView("q_t")
     first_answer.filter(col("row_number")===1).createOrReplaceTempView("a_t")
