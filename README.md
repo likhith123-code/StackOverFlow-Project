@@ -10,13 +10,13 @@ https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-
 
 ## Questions 
 
-What is the percentage of questions that have been answered over the years?
+1. What is the percentage of questions that have been answered over the years?
 
-What is the reputation and badge count of users across different tenures on StackOverflow?
+2. What is the reputation and badge count of users across different tenures on StackOverflow?
 
-What are 10 of the “easier” gold badges to earn?
+3. What are 10 of the “easier” gold badges to earn?
 
-Which day of the week has most questions answered within an hour?
+4. Which day of the week has most questions answered within an hour?
 
 ## Steps for Execution
 
@@ -38,4 +38,7 @@ spark-submit --packages com.databricks:spark-xml_2.12:0.15.0 --class <class-name
 
 ### Note
 
-The Outputs shown are the result of processing Partial Data as the complete
+The Outputs shown are the result of processing Partial Data as the complete data is too vast to process. Hence A couple of split files are used to process.
+
+The initial input files are split into parts using :
+```split -a <file_name_to_appear> -d -l <No_of_records_per_split_file> <File_toSplit> <Split_file_name_>```
