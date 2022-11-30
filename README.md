@@ -18,6 +18,18 @@ What are 10 of the “easier” gold badges to earn?
 
 Which day of the week has most questions answered within an hour?
 
+## Steps for Execution
+
+1. Download the data into HDFS file system
+```bash
+  wget <link>
+  7z e <file-name>
+```
+2. Move the data to HDFS
+```bash
+ hadoop fs -put <source-path> <hdfs-destination-path>
+```
+
 ### Note
 
 The Outputs shown are the result of processing Partial Data as the complete
