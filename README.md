@@ -43,5 +43,4 @@ The Outputs shown are the result of processing partial data as the complete data
 The initial input files are split into parts using :
 <br>
 
-```split -a <Suffix_length> -d -l <No_of_records_per_split_file> <File_to_Split> <Prefix_for_new_files>
-```
+``` split -a <Suffix_length> -d -l <No_of_records_per_split_file> <File_to_Split> <Prefix_for_new_files> ```
