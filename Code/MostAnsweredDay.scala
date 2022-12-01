@@ -66,7 +66,7 @@ object MostAnsweredDay {
            .when(col("question_posted_day")===7,"Saturday"))
       .select("Day","Total_Count")
 
-    count_of_answered.write.mode("overwrite").format("csv").save(args(1))
+   count_of_answered.coalesce(1).write.mode("overwrite").format("csv").option("header","true").save(args(1))
 
 
 
